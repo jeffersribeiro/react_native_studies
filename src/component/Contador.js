@@ -7,7 +7,7 @@ export default class Contador extends Component{
 
 
     state={
-        numero:'01',
+        numero:'',
         text:''
     }
 
