@@ -7,19 +7,22 @@ export default class Contador extends Component{
 
 
     state={
+<<<<<<< HEAD
         numero:'0',
         text:''
+=======
+        text:'',
+        numero:''
+>>>>>>> dev
     }
 
      maisUm() {
-         this.setState({
-            numero: this.state.text
-         })
+         this.setState({text})
      }
     limpar = () => {
         this.setState({
-            numero:'',
-            text: null 
+            text: '', 
+            numero:''
         })
     }
 render(){
