@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {View, Text} from 'react-native'
 
 const fonte = { style:{fontSize:30} }
-const cor ={ style:{color:'blue'} }
+const cor ={ style:{color:'yellow'} }
 
 export const Filho = props =>{
     return(<View>
