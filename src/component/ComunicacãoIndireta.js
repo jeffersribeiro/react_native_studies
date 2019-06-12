@@ -1,36 +1,14 @@
-import raect from 'raect'
-import {View,Text} from 'react-native'
+import React, { Component } from 'react'
+import {View, Text,TextInput} from 'react-native'
+import style from '../styles/Padrao'
+import { typeAlias } from '@babel/types';
 
-const fonte= { style:{fontSize: 30, color:'red'} } 
+export const Entrada = () => {
 
-export const filho = props => {
     return(
         <View>
-            <Text {...fonte}>Filho: {props.nome}{props.sobrenome}</Text>
-        </View>
-    )
-}
-export const Pai = props => {
-    return(
-        <View>
-        <Text {...fonte} >Pai: {props.nome}{props.sobrenome}</Text>
-        {props.children}
-        </View>
-    )
-}
- const Avo = props => {
-    return(
-        <View>
-        <Text {...fonte}>Filho: {props.nome}{props.sobrenome}</Text>
-        <Pai nome='andre'> {props.sobrenome}
-            <Filho nome='teste1'/>
-            <Filho nome='teste1'/>
-        </Pai>
-        
-        <Pai {...props} nome='João'>
-            <Filho nome='teste1'/>
-            <Filho nome='teste1'/>
-        </Pai>
+            <TextInput value={props.texto} 
+           style={style.input}
+           onChangeText={this.chamarQuandoMudar}/>
         </View>
     )}
- export default Avo
