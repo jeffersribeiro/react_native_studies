@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {View, Text} from 'react-native'
+import {Text} from 'react-native'
 import PropTypes from 'prop-types';
 
 
@@ -10,7 +10,7 @@ const ValidarProps = ({ label, ano}) => {
     return ( 
         <Text style={{fontSize:35}}>
             {label}
-            {ano + 2000}
+            {ano}
             {state}
         </Text>
     )

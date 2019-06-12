@@ -6,19 +6,20 @@ import Simples from './component/simples'
 import ParImpar from './component/ParImpar'
 import Contador from './component/Contador'
 import Plataforma from './component/Plataforma'
-import ValidarProps from './component/ValidarProps'
+import teste from './component/ValidarProps'
 import Evento from './component/Evento'
-
-function Teste () {
-    return null
-}
+import Avo from './component/ComunicaoDireta'
+ 
 
 const AppContainer =  createDrawerNavigator({
+    Avo:{
+        screen:() => <Avo nome='João ' sobrenome='Ribeiro'/>
+    },
     Evento:{
         screen:() => <Evento />
     },
     ValidarProps:{
-        screen: () => <ValidarProps ano={19} />
+        screen: teste
     },
     plataforma:{
         screen: () => <Plataforma />
