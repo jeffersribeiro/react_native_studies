@@ -1,11 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native'
 
 const fonte = { style:{fontSize:30} }
-const cor ={ style:{color:'red'} }
 
 export const Filho = props =>{
-    return(<View>
+    return(
+    <View>
         <Text {...fonte}>Filho: {props.nome}{props.sobrenome}</Text>
     </View>
     )}

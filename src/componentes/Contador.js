@@ -7,13 +7,8 @@ export default class Contador extends Component{
 
 
     state={
-<<<<<<< HEAD
-        numero:'0',
+        numero:'',
         text:''
-=======
-        text:'',
-        numero:''
->>>>>>> dev
     }
 
      maisUm() {

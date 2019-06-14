@@ -1,20 +1,37 @@
 import React from 'react'
 import { createDrawerNavigator } from 'react-navigation'
 
-import Inverter, { MegaSena } from './component/Multi'
-import Simples from './component/simples'
-import ParImpar from './component/ParImpar'
-import Contador from './component/Contador'
-import Plataforma from './component/Plataforma'
-import teste from './component/ValidarProps'
-import Evento from './component/Evento'
-import Avo from './component/ComunicaoDireta'
+import Inverter, { MegaSena } from './componentes/Multi'
+import Simples from './componentes/simples'
+import ParImpar from './componentes/ParImpar'
+import Contador from './componentes/Contador'
+import Plataforma from './componentes/Plataforma'
+import teste from './componentes/ValidarProps'
+import Evento from './componentes/Evento'
+import Avo from './componentes/ComunicacaoDireta'
+import TextoSincronizado from './componentes/ComunicacaoIndireta'
+import ListaFlex from './componentes/ListaFlex'
+import Flex from './componentes/Flex'
+import Button from './componentes/Button'
  
 
 const AppContainer =  createDrawerNavigator({
-    Avo:{
-        screen:() => <Avo nome='João ' sobrenome='Ribeiro'/>
+    Button:{
+        screen:() => <Button />,
+        navigationOptions:{title: 'Calculadora'}
     },
+    Flex:{
+        screen: Flex
+    },
+    ListaFlex:{
+        screen: ListaFlex
+    },
+    TextoSincronizado:{
+        screen: TextoSincronizado
+    },
+    Avo:{
+         screen:() => <Avo nome='João ' sobrenome='Ribeiro'/>
+     },
     Evento:{
         screen:() => <Evento />
     },
