@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {View, Text,TextInput} from 'react-native'
 import style from '../styles/Padrao'
 
-export const Entrada = () => 
-    
+const Entrada = props => 
         <View>
             <TextInput value={props.texto} 
            style={style.input}
@@ -12,9 +11,9 @@ export const Entrada = () =>
 
 const fonte40 = {style:{fontSize:40}}
 
-    export class TextoSincronizado extends Component{
+    export default class TextoSincronizado extends Component{
         state={
-            texto:''
+            texto: null
         }
         AlterarTexto = texto => {
             this.setState({texto})
@@ -22,7 +21,9 @@ const fonte40 = {style:{fontSize:40}}
         render(){
             return(
                 <View>
-                    <Text{...fonte40}/>
+                    <Text {...fonte40}>{this.state.texto}</Text>
+                    <Entrada texto={this.state.texto}
+                        chamarQuandoMudar={this.AlterarTexto}/>
                 </View>
             )}
         }
