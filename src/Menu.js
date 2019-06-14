@@ -12,9 +12,14 @@ import Avo from './componentes/ComunicacaoDireta'
 import TextoSincronizado from './componentes/ComunicacaoIndireta'
 import ListaFlex from './componentes/ListaFlex'
 import Flex from './componentes/Flex'
+import Button from './componentes/Button'
  
 
 const AppContainer =  createDrawerNavigator({
+    Button:{
+        screen:() => <Button />,
+        navigationOptions:{title: 'Calculadora'}
+    },
     Flex:{
         screen: Flex
     },
