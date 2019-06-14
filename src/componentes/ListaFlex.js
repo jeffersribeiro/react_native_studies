@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { scrollView, View, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import { ScrollView, FlatList } from 'react-native-gesture-handler';
 
 const Alunos = [
@@ -29,7 +29,11 @@ const itemlist = {
     height:50,
     backgroundColor:'#DDD',
     borderWidth:0.5,
-    borderColor:'#222'
+    borderColor:'#222',
+    //Flex
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between'
 }
 
 export const Aluno = props =>
@@ -38,12 +42,12 @@ export const Aluno = props =>
 <Text style={{fontWeight:'bold'}}>Nota: {props.nota}</Text>
 </View>
 export default props => {
-    const renderIterm = ({item}) => {
+    const renderItem = ({item}) => {
 return <Aluno {...item} />
     }
     return(
         <ScrollView>
-            <FlatList data={Alunos} renderItem={renderIterm}
+            <FlatList data={Alunos} renderItem={renderItem}
             keyExtractor={(_,index) => index.toString()} />
         </ScrollView>
     )
